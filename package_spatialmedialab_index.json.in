@@ -1,0 +1,174 @@
+{
+  "packages": [{
+    "name": "spatialmedialab",
+    "maintainer": "spatialmedialab",
+    "websiteURL": "https://spatialmedialab.org/",
+    "email": "support@spatialmedialab.org",
+    "help": {
+      "online": "https://github.com/Spatial-Media-Lab/"
+    },
+    "platforms": [{
+      "name": "Spatial Media Lab Boards",
+      "architecture": "samd",
+      "version": "@@VERSION@@",
+      "category": "spatialmedialab",
+      "url": "https://spatial-media-lab.github.io/download/spatialmedialab-samd-@@VERSION@@.tar.bz2",
+      "archiveFileName": "spatialmedialab-samd-@@VERSION@@.tar.bz2",
+      "checksum": "SHA-256:@@HASH@@",
+      "boards": [{
+        "name": "tracker"
+      }],
+      "toolsDependencies": [{
+          "packager": "spatialmedialab",
+          "name": "CMSIS",
+          "version": "5.4.0"
+        },
+        {
+          "packager": "spatialmedialab",
+          "name": "CMSIS-Atmel",
+          "version": "1.2.0"
+        },
+        {
+          "packager": "spatialmedialab",
+          "name": "arm-none-eabi-gcc",
+          "version": "10-2020q4"
+        },
+        {
+          "packager": "spatialmedialab",
+          "name": "bossac",
+          "version": "1.9.1-arduino1"
+        }
+      ]
+    }],
+    "tools": [{
+        "name": "CMSIS",
+        "version": "5.4.0",
+        "systems": [{
+            "host": "i686-mingw32",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "x86_64-apple-darwin",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "x86_64-pc-linux-gnu",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "i686-pc-linux-gnu",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "arm-linux-gnueabihf",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "aarch64-linux-gnu",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          },
+          {
+            "host": "all",
+            "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
+            "archiveFileName": "CMSIS_5-5.4.0.tar.gz",
+            "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+            "size": "153772853"
+          }
+        ]
+      },
+      {
+        "name": "CMSIS-Atmel",
+        "version": "1.2.0",
+        "systems": [{
+            "host": "i686-mingw32",
+            "url": "http://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
+            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+          },
+          {
+            "host": "x86_64-apple-darwin",
+            "url": "http://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
+            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+          },
+          {
+            "host": "x86_64-pc-linux-gnu",
+            "url": "https://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
+            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+          },
+          {
+            "host": "all",
+            "url": "https://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
+            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+          }
+        ]
+      },
+      {
+        "name": "arm-none-eabi-gcc",
+        "version": "10-2020q4",
+        "systems": [{
+            "host": "i686-mingw32",
+            "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-none-eabi-10-2020-q4-major-win32.zip",
+            "archiveFileName": "gcc-arm-none-eabi-10-2020-q4-major-win32.zip",
+            "checksum": "MD5:5ee6542a2af847934177bc8fa1294c0d"
+          },
+          {
+            "host": "x86_64-apple-darwin",
+            "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-none-eabi-10-2020-q4-major-mac.tar.bz2",
+            "archiveFileName": "gcc-arm-none-eabi-10-2020-q4-major-mac.tar.bz2",
+            "checksum": "MD5:e588d21be5a0cc9caa60938d2422b058"
+          },
+          {
+            "host": "x86_64-pc-linux-gnu",
+            "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2",
+            "archiveFileName": "gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2",
+            "checksum": "MD5:8312c4c91799885f222f663fc81f9a31"
+          }
+        ]
+      },
+      {
+        "name": "bossac",
+        "version": "1.9.1-arduino1",
+        "systems": [{
+            "host": "i686-mingw32",
+            "url": "http://downloads.arduino.cc/tools/bossac-1.9.1-arduino1-windows.tar.gz",
+            "archiveFileName": "bossac-1.9.1-arduino1-windows.tar.gz",
+            "checksum": "SHA-256:fe2d6ef78ca711c78e104e258357ed06b09e95e9356dc72d8d2c9f6670af4b7a"
+          },
+          {
+            "host": "x86_64-apple-darwin",
+            "url": "https://spatial-media-lab.github.io/download/bossac-1.9.1-osx.tar.gz",
+            "archiveFileName": "bossac-1.9.1-osx.tar.gz",
+            "checksum": "SHA-256:a99a893930ceac2b7aeb9f7517cc57d95818a46c7209fc5811d0aa47e7eb7b25"
+          },
+          {
+            "host": "x86_64-pc-linux-gnu",
+            "url": "http://downloads.arduino.cc/tools/bossac-1.9.1-arduino1-linux64.tar.gz",
+            "archiveFileName": "bossac-1.9.1-arduino1-linux64.tar.gz",
+            "checksum": "SHA-256:d3d324a3503a8db825c01f3b38519e4d4824c4d0e42cb399a16c1e074f9a9a86"
+          }
+        ]
+      }
+    ]
+  }]
+}
