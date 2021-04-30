@@ -16,7 +16,7 @@ echo '{' > $output
 
 for i in $projects; do
   name=$(basename $i)
-  project=~/Documents/Arduino/spatialmedialab/$i
+  project=~/github/Spatial-Media-Lab/$i
   meta=$(grep V2DEVICE_METADATA $project/$(basename $name).ino)
   # V2DEVICE_METADATA("com.versioduo.pad", 4, "versioduo:samd:pad")
   match='.*V2DEVICE_METADATA\("(.*)",[[:space:]]([0-9]*),[[:space:]]"(.*)"\).*'
