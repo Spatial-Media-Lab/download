@@ -10,11 +10,11 @@
     "platforms": [{
       "name": "Spatial Media Lab Boards",
       "architecture": "samd",
-      "version": "2",
+      "version": "3",
       "category": "spatialmedialab",
-      "url": "https://spatial-media-lab.github.io/download/spatialmedialab-samd-2.tar.bz2",
-      "archiveFileName": "spatialmedialab-samd-2.tar.bz2",
-      "checksum": "SHA-256:89f8f88b31ce3dd730f75cea88044000fe7886512221eb08ef9c9e7ccaf2f336",
+      "url": "https://spatial-media-lab.github.io/download/spatialmedialab-samd-3.tar.bz2",
+      "archiveFileName": "spatialmedialab-samd-3.tar.bz2",
+      "checksum": "SHA-256:10620587f16ec68380561f4e9ded2703146ab4df5022a109795cd3d69dba1000",
       "boards": [{
         "name": "tracker"
       }],
@@ -26,7 +26,7 @@
         {
           "packager": "spatialmedialab",
           "name": "CMSIS-Atmel",
-          "version": "1.2.0"
+          "version": "1.2.2"
         },
         {
           "packager": "spatialmedialab",
@@ -96,30 +96,34 @@
       },
       {
         "name": "CMSIS-Atmel",
-        "version": "1.2.0",
+        "version": "1.2.2",
         "systems": [{
             "host": "i686-mingw32",
-            "url": "http://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
-            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
-            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+            "url": "https://github.com/adafruit/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.2/CMSIS-Atmel-1.2.2.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+            "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+            "size": "2511228"
           },
           {
             "host": "x86_64-apple-darwin",
-            "url": "http://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
-            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
-            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+            "url": "https://github.com/adafruit/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.2/CMSIS-Atmel-1.2.2.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+            "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+            "size": "2511228"
           },
           {
             "host": "x86_64-pc-linux-gnu",
-            "url": "https://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
-            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
-            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+            "url": "https://github.com/adafruit/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.2/CMSIS-Atmel-1.2.2.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+            "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+            "size": "2511228"
           },
           {
             "host": "all",
-            "url": "https://downloads.arduino.cc/CMSIS-Atmel-1.2.0.tar.bz2",
-            "archiveFileName": "CMSIS-Atmel-1.2.0.tar.bz2",
-            "checksum": "SHA-256:5e02670be7e36be9691d059bee0b04ee8b249404687531f33893922d116b19a5"
+            "url": "https://github.com/adafruit/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.2/CMSIS-Atmel-1.2.2.tar.bz2",
+            "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+            "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+            "size": "2511228"
           }
         ]
       },

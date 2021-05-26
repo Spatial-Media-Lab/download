@@ -11,8 +11,7 @@ mkdir samd/
 
 cp -a  arduino-board-package/{variants,boards.txt,platform.txt} samd/
 cp -a  arduino-board-package/ArduinoCore-samd/cores samd/
-mkdir samd/libraries
-cp -a  arduino-board-package/ArduinoCore-samd/libraries/{Adafruit_ZeroDMA,SPI,Wire} samd/libraries/
+cp -aL  arduino-board-package/libraries/ samd/libraries/
 
 version=$(grep 'version=' arduino-board-package/platform.txt | sed -E 's/.*version=([0-9]*).*/\1/')
 
@@ -29,3 +28,4 @@ sed -i '' -E "s/@@HASH@@/$hash/" package_spatialmedialab_index.json
 
 rm -rf arduino-board-package
 rm -rf samd/
+git add spatialmedialab-samd-$version.tar.bz2
