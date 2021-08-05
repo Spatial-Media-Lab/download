@@ -2,7 +2,13 @@
 
 set -e
 
-projects="\
+if [[ "$1" == "--clean" ]]; then
+  rm -f *.firmware-*
+fi
+
+project=~/github/Spatial-Media-Lab
+
+devices="\
   tracker\
 "
 
@@ -14,10 +20,9 @@ mkdir build/
 comma=''
 echo '{' > $output
 
-for i in $projects; do
+for i in $devices; do
   name=$(basename $i)
-  project=~/github/Spatial-Media-Lab/$i
-  meta=$(grep V2DEVICE_METADATA $project/$(basename $name).ino)
+  meta=$(grep V2DEVICE_METADATA $project/$i/$(basename $name).ino)
   # V2DEVICE_METADATA("com.versioduo.pad", 4, "versioduo:samd:pad")
   match='.*V2DEVICE_METADATA\("(.*)",[[:space:]]([0-9]*),[[:space:]]"(.*)"\).*'
   id=$(echo $meta | sed -E "s/$match/\1/")
@@ -25,7 +30,7 @@ for i in $projects; do
   board=$(echo $meta | sed -E "s/$match/\3/")
   firmware=$id.firmware-$version.bin
 
-  arduino-cli compile --fqbn $board --output-dir build $project
+  arduino-cli compile --fqbn $board --output-dir build $project/$i
   mv build/$name.ino.bin build/$firmware
 
   hash=$(shasum -a 1 build/$firmware | sed -E 's/ .*//')
@@ -50,5 +55,4 @@ chmod 0444 build/*.bin
 mv -f build/*.bin .
 mv -f build/*.uf2 .
 rm -rf build/
-git add *.bin *.uf2
-
+git add index.json *.bin *.uf2
