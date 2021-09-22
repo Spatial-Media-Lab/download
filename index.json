@@ -1,8 +1,8 @@
 {
   "org.spatialmedialab.tracker": {
-    "file": "org.spatialmedialab.tracker.firmware-18.bin",
-    "version": 18,
+    "file": "org.spatialmedialab.tracker.firmware-19.bin",
+    "version": 19,
     "board": "spatialmedialab:samd:tracker",
-    "hash": "347b429627f92c905f129ce99d86437e3c4aac2c"
+    "hash": "a2cfd5018ad94d47f6a3deb94e41260456253157"
   }
 }
