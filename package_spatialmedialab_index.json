@@ -10,11 +10,11 @@
     "platforms": [{
       "name": "Spatial Media Lab Boards",
       "architecture": "samd",
-      "version": "4",
+      "version": "5",
       "category": "spatialmedialab",
-      "url": "https://spatial-media-lab.github.io/download/spatialmedialab-samd-4.tar.bz2",
-      "archiveFileName": "spatialmedialab-samd-4.tar.bz2",
-      "checksum": "SHA-256:4be37ec5af0825f793c91bf173596a609137d2b5211a051aa4d9f8be6742c658",
+      "url": "https://spatial-media-lab.github.io/download/spatialmedialab-samd-5.tar.bz2",
+      "archiveFileName": "spatialmedialab-samd-5.tar.bz2",
+      "checksum": "SHA-256:065042f845fff6d93f1d0a4cbf93dd289da040d5d63db620969cb6f013e90cc2",
       "boards": [{
         "name": "tracker"
       }],
