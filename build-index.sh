@@ -2,8 +2,6 @@
 
 set -e
 
-project=~/Documents/Arduino/versioduo
-
 # Get the list of devices.
 typeset -A devices
 for i in *.firmware-*.bin; do

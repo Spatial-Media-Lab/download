@@ -1,16 +1,10 @@
 {
   "org.spatialmedialab.tracker": [
     {
-      "file": "org.spatialmedialab.tracker.firmware-22.bin",
-      "version": 22,
+      "file": "org.spatialmedialab.tracker.firmware-24.bin",
+      "version": 24,
       "board": "spatialmedialab:samd:tracker",
-      "hash": "294b7ceb218cc93f5dc1f75c4d474497338a41b0"
-    },
-    {
-      "file": "org.spatialmedialab.tracker.firmware-23.bin",
-      "version": 23,
-      "board": "spatialmedialab:samd:tracker",
-      "hash": "7bc1280e5bcc1f7861f07c111a036335798d7b6f"
+      "hash": "b490bd7372ad9caf8d7a12a17b1e94a963c581ed"
     }
   ]
 }
