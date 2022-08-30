@@ -10,7 +10,7 @@
       "file": "org.spatialmedialab.tracker.firmware-25.bin",
       "version": 25,
       "board": "spatialmedialab:samd:tracker",
-      "hash": "9b9d431deccca02da9e92d704f9ab6aef52e3ef4"
+      "hash": "eb2c4fc8abb1b4ccf13713b6771402c19784df0d"
     }
   ]
 }
