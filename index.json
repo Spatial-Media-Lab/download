@@ -5,6 +5,12 @@
       "version": 24,
       "board": "spatialmedialab:samd:tracker",
       "hash": "b490bd7372ad9caf8d7a12a17b1e94a963c581ed"
+    },
+    {
+      "file": "org.spatialmedialab.tracker.firmware-25.bin",
+      "version": 25,
+      "board": "spatialmedialab:samd:tracker",
+      "hash": "9b9d431deccca02da9e92d704f9ab6aef52e3ef4"
     }
   ]
 }

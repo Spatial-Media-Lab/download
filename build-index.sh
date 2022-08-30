@@ -44,4 +44,3 @@ for device versions in "${(@kv)devices}"; do
 done
 
 echo -e "\n}" >> $output
-
