@@ -2,7 +2,7 @@
 
 set -e
 
-project=~/github/Spatial-Media-Lab
+project=~/github/Spatial-Media-Lab/
 
 devices="\
   tracker\
@@ -29,7 +29,7 @@ for i in $devices; do
   mv build/$name.ino.bin build/$firmware
 
   rm -f $id.firmware-$version.uf2
-  python ../uf2-samdx1/lib/uf2/utils/uf2conv.py -b 16384 -c -o build/$id.firmware-$version.uf2 build/$firmware
+  python3 ../uf2-samdx1/lib/uf2/utils/uf2conv.py -b 16384 -c -o build/$id.firmware-$version.uf2 build/$firmware
 done
 
 if [[ "$1" == "--clean" ]]; then
