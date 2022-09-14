@@ -2,8 +2,11 @@
 
 set -e
 
+vendor=spatialmedialab
+architecture=samd
+
 if [[ "$1" == "--clean" ]]; then
-  rm -f spatialmedialab-samd-*
+  rm -f ${vendor}-${architecture}-*
 fi
 
 rm -rf arduino-board-package
@@ -23,22 +26,24 @@ rm -f  samd/cores/arduino/math_helper.*
 # Copy only the needed libraries
 cp -aL  arduino-board-package/libraries/ samd/libraries/
 
-# Disable debug, it occupies Serial1.
+# Disable USB debug, it occupies Serial1.
 sed -i '' 's/#define CFG_TUSB_DEBUG 2/#define CFG_TUSB_DEBUG 0/' samd/libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/samd/tusb_config_samd.h
 
 version=$(grep 'version=' arduino-board-package/platform.txt | sed -E 's/.*version=([0-9]*).*/\1/')
 
 # Create reproducible tar, use the timestamp of the last commit from the board package repository.
 date=$(git log -1 --format=%cd arduino-board-package)
-#tar --numeric-owner --owner=0 --group=0 --sort=name --clamp-mtime --mtime="$date" -cjf spatialmedialab-samd-$version.tar.bz2 samd/
-tar --numeric-owner -cjf spatialmedialab-samd-$version.tar.bz2 samd/
+#tar --numeric-owner --owner=0 --group=0 --sort=name --clamp-mtime --mtime="$date" -cjf ${vendor}-${architecture}-${version}.tar.bz2 samd/
+tar --numeric-owner -cjf ${vendor}-${architecture}-${version}.tar.bz2 samd/
 
-hash=$(shasum -a 256 spatialmedialab-samd-$version.tar.bz2 | sed -E 's/ .*//')
+hash=$(shasum -a 256 ${vendor}-${architecture}-${version}.tar.bz2 | sed -E 's/ .*//')
+size=$(stat -f %z ${vendor}-${architecture}-${version}.tar.bz2)
 
-cp package_spatialmedialab_index.json.in package_spatialmedialab_index.json
-sed -i '' -E "s/@@VERSION@@/$version/" package_spatialmedialab_index.json
-sed -i '' -E "s/@@HASH@@/$hash/" package_spatialmedialab_index.json
+cp package_${vendor}_index.json.in package_${vendor}_index.json
+sed -i '' -E "s/@@VERSION@@/${version}/" package_${vendor}_index.json
+sed -i '' -E "s/@@HASH@@/${hash}/" package_${vendor}_index.json
+sed -i '' -E "s/@@SIZE@@/${size}/" package_${vendor}_index.json
 
 rm -rf arduino-board-package
 rm -rf samd/
-git add spatialmedialab-samd-$version.tar.bz2
+git add ${vendor}-${architecture}-${version}.tar.bz2
